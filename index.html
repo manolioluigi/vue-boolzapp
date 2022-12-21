@@ -86,18 +86,21 @@
 
                             <div v-for="(contact, index) in contacts" class="d-flex justify-content-between">
 
-                                <div class="d-flex">
+                                <div class="d-flex my-2">
 
-                                    <img :src="'./img/avatar'+contact.avatar[index]+'.jpg'" alt="" class="icon-image mx-2">
+                                    <img :src="'./img/avatar'+contact.avatar+'.jpg'" alt="" class="icon-image mx-2">
                                     <div class="d-flex flex-column justify-content-center mx-1">
-                                        <h5 class="line-height-5">Michele</h5>
-                                        <span class="color-gray">Ultimo messaggio inviato</span>
+                                        <h5 class="line-height-5">{{contact.name}}</h5>
+                                        <span class="color-gray">{{contact.messages[contact.messages.length-1].message}}</span>
                                     </div>
 
                                 </div>
 
                                 <div>
-                                    <span class="color-gray font-size-13">12.00</span>
+                                    <span class="color-gray font-size-13">
+                                        <!--{{orarioUltimoMessaggio(index)}}-->
+                                        12:00
+                                    </span>
                                 </div>
 
                             </div>
@@ -118,7 +121,7 @@
 
                         <div class="col-10">
 
-
+                            
 
                         </div>
 

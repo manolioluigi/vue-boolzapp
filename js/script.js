@@ -170,5 +170,22 @@ createApp({
         
 
     }
+  },
+
+  methods: {
+
+    /*
+    orarioUltimoMessaggio(index){
+      let oraOggetto = this.contacts[index].messages.date.toString();
+      console.log(oraOggetto);
+      const arrayOrario = oraOggetto.split(" ");
+      console.log(arrayOrario)
+      let ora = arrayOrario[1];
+      console.log(ora)
+      return ora;
+    }
+    */
+
   }
+
 }).mount('#app')
