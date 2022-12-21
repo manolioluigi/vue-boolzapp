@@ -61,11 +61,26 @@ body{
     background-image: url(../img/mine.jpg);
 }
 
+.icon-image{
+    width: 60px;
+    border-radius: 20px;
+}
+
 .border-gray{
     border-left: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
 }
 
+.color-gray{
+    color: rgba(177,177,177,255);
+}
+
+.font-size{
+    font-size: 25px;
+}
+
 .scroll{
     overflow-y: scroll;
 }
+
+
