@@ -31,14 +31,14 @@
 
                             <div class="d-flex align-items-center height-full">
                                 <img src="./img/avatar_io.jpg" alt="avatar_io" class="icon-image">
-                                <h5>Sofia</h5>
+                                <h5 class="mx-1">Sofia</h5>
                             </div>
 
                         </div>
 
                         <div class="col-6 d-flex justify-content-end">
 
-                            <div class="d-flex align-items-center height-full color-gray font-size">
+                            <div class="d-flex align-items-center height-full color-gray font-size-25">
                                 <i class="fa-solid fa-circle-notch mx-3"></i>
                                 <i class="fa-solid fa-message mx-2"></i>
                                 <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
@@ -52,9 +52,14 @@
 
                     <div class="row background-light-blue height-10">
 
-                        <div class="col-12">
+                        <div class="col-12 d-flex align-items-center">
 
+                            <div class="background-white white-circle d-flex justify-content-center align-items-center font-size-25 mx-2"><i class="fa-solid fa-bell-slash color-light-blue"></i></div>
 
+                            <div class="d-flex flex-column justify-content-center mx-1">
+                                <span class="font-size-18">Ricevi notifiche di nuovi messaggi</span>
+                                <a href="#" class="color-purple">Attiva notifiche desktop</a>
+                            </div>
 
                         </div>
 
@@ -64,9 +69,10 @@
 
                     <div class="row background-white height-5 border-gray">
 
-                        <div class="col-12">
+                        <div class="col-12 d-flex align-items-center">
 
-
+                            <i class="fa-solid fa-magnifying-glass mx-4 margin-top-5 color-gray font-size-18"></i>
+                            <input type="text" class="form-text width mx-3" placeholder="Cerca o inizia una nuova chat">
 
                         </div>
 
@@ -78,7 +84,23 @@
 
                         <div class="col-12">
 
+                            <div v-for="(contact, index) in contacts" class="d-flex justify-content-between">
 
+                                <div class="d-flex">
+
+                                    <img :src="./img/avatarcontact.avatar[index].jpg" alt="" class="icon-image mx-2">
+                                    <div class="d-flex flex-column justify-content-center mx-1">
+                                        <h5 class="line-height-5">Michele</h5>
+                                        <span class="color-gray">Ultimo messaggio inviato</span>
+                                    </div>
+
+                                </div>
+
+                                <div>
+                                    <span class="color-gray font-size-13">12.00</span>
+                                </div>
+
+                            </div>
 
                         </div>
 

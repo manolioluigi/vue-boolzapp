@@ -41,6 +41,15 @@ body{
     height: 5%;
 }
 
+.width{
+    width: 80%;
+    border: none;
+}
+
+.margin-top-5{
+    margin-top: 5px;
+}
+
 .background-gray{
     background-color: rgba(234,234,234,255);
 }
@@ -75,12 +84,36 @@ body{
     color: rgba(177,177,177,255);
 }
 
-.font-size{
+.color-light-blue{
+    color: rgba(142,218,252,255);
+}
+
+.color-purple{
+    color: rgba(89,125,145,255);
+}
+
+.font-size-25{
     font-size: 25px;
+}
+
+.font-size-18{
+    font-size: 18px;
+}
+
+.font-size-13{
+    font-size: 13px;
 }
 
 .scroll{
     overflow-y: scroll;
 }
 
+.white-circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
 
+.line-height-5{
+    line-height: 5px;
+}
