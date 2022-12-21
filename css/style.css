@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to top, #dde8e8 , #DDDBD1 85%, #009688 85%);
+}
+
+/*Utility*/
+
+.height-full{
+    height: 100%;
+}
+
+.height-100{
+    height: 100vh;
+}
+
+.height-95{
+    height: 95%;
+}
+
+.block-red{
+    background-color: red;
+}
+
+.block-blue{
+    background-color: blue;
+}
