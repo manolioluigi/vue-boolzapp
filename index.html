@@ -84,9 +84,9 @@
 
                         <div class="col-12">
 
-                            <div v-for="(contact, index) in contacts" class="d-flex justify-content-between">
+                            <div v-for="(contact, index) in contacts" class="d-flex justify-content-between" @click="getIndex(index)">
 
-                                <div class="d-flex my-2" @click="getIndex(index)">
+                                <div class="d-flex my-2">
 
                                     <img :src="'./img/avatar'+contact.avatar+'.jpg'" alt="" class="icon-image mx-2">
                                     <div class="d-flex flex-column justify-content-center mx-1">
@@ -124,6 +124,13 @@
                             <div class="d-flex align-items-center height-full">
 
                                 <img :src="'./img/avatar'+contacts[currentUser].avatar+'.jpg'" alt="" class="icon-image mx-2">
+                                <div>
+                                    <h5>{{contacts[currentUser].name}}</h5>
+                                    <span class="color-gray">Ultimo accesso oggi alle: {{contacts[currentUser].messages[contacts[currentUser].messages.lenght].date}}</span>
+                                    <!--
+                                    <h5 class="line-height-5">{{contacts[currentUser].name}}</h5>
+                                    <span class="color-gray">Ultimo accesso oggi alle: {{orarioUltimoMessaggio(currentUser)}}</span>-->
+                                </div>
 
                             </div>
 
