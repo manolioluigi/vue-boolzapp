@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+      currentUser: 0,
         
       contacts: [
         {
@@ -185,8 +186,7 @@ createApp({
     },
 
     getIndex(index){
-      let currentUser = index;
-      return currentUser;
+      this.currentUser = index;
     }
     
   }
