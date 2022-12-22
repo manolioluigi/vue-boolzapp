@@ -80,24 +80,24 @@
 
                     <!--Quarta Riga-->
 
-                    <div class="row background-white height-77 border-gray">
+                    <div class="row background-white height-77 border-gray scroll-auto">
 
-                        <div class="col-12">
+                        <div class="col-12 g-0">
 
-                            <div v-for="(contact, index) in contacts" class="d-flex justify-content-between" @click="getIndex(index)">
+                            <div v-for="(contact, index) in contacts" class="d-flex justify-content-between chats" @click="getIndex(index)" :id="'chat'+index">
 
                                 <div class="d-flex my-2">
 
                                     <img :src="'./img/avatar'+contact.avatar+'.jpg'" alt="" class="icon-image mx-2">
                                     <div class="d-flex flex-column justify-content-center mx-1">
-                                        <h5 class="line-height-5">{{contact.name}}</h5>
-                                        <span class="color-gray">{{contact.messages[contact.messages.length-1].message}}</span>
+                                        <h5 class="line-height-5 margin-top-5">{{contact.name}}</h5>
+                                        <span class="color-gray line-height-15">{{contact.messages[contact.messages.length-1].message}}</span>
                                     </div>
 
                                 </div>
 
                                 <div>
-                                    <span class="color-gray font-size-13">
+                                    <span class="color-gray font-size-13 mx-2">
                                         {{orarioUltimoMessaggio(index)}}
 
                                     </span>

@@ -3,8 +3,10 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+      elements: [],
       flag: false,
       currentUser: 0,
+      addClass: false,
         
       contacts: [
         {
@@ -178,16 +180,22 @@ createApp({
     
     orarioUltimoMessaggio(index){
       let oraOggetto = this.contacts[index].messages[this.contacts[index].messages.length-1].date.toString();
-      console.log(oraOggetto);
       const arrayOrario = oraOggetto.split(" ");
-      console.log(arrayOrario)
       let ora = arrayOrario[1];
-      console.log(ora)
       return ora;
     },
 
     getIndex(index){
       this.currentUser = index;
+
+      this.elements = document.querySelectorAll(".chats");
+      for(let i=0; i<this.elements.length; i++){
+        this.elements[i].classList.remove("active");
+      }
+
+      let element = document.getElementById('chat'+index);
+      element.classList.add("active");
+
     },
 
     isSent(currentUser, index){
