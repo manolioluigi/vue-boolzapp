@@ -86,7 +86,7 @@
 
                             <div v-for="(contact, index) in contacts" class="d-flex justify-content-between">
 
-                                <div class="d-flex my-2">
+                                <div class="d-flex my-2" @click="getIndex(index)">
 
                                     <img :src="'./img/avatar'+contact.avatar+'.jpg'" alt="" class="icon-image mx-2">
                                     <div class="d-flex flex-column justify-content-center mx-1">
@@ -98,8 +98,8 @@
 
                                 <div>
                                     <span class="color-gray font-size-13">
-                                        <!--{{orarioUltimoMessaggio(index)}}-->
-                                        12:00
+                                        {{orarioUltimoMessaggio(index)}}
+
                                     </span>
                                 </div>
 

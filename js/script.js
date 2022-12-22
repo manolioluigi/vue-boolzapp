@@ -173,19 +173,22 @@ createApp({
   },
 
   methods: {
-
-    /*
+    
     orarioUltimoMessaggio(index){
-      let oraOggetto = this.contacts[index].messages.date.toString();
+      let oraOggetto = this.contacts[index].messages[this.contacts[index].messages.length-1].date.toString();
       console.log(oraOggetto);
       const arrayOrario = oraOggetto.split(" ");
       console.log(arrayOrario)
       let ora = arrayOrario[1];
       console.log(ora)
       return ora;
-    }
-    */
+    },
 
+    getIndex(index){
+      let currentUser = index;
+      return currentUser;
+    }
+    
   }
 
 }).mount('#app')
