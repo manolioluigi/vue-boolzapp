@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+      flag: false,
       currentUser: 0,
         
       contacts: [
@@ -187,6 +188,16 @@ createApp({
 
     getIndex(index){
       this.currentUser = index;
+    },
+
+    isSent(currentUser, index){
+      
+      if(this.contacts[currentUser].messages[index].status == "sent"){
+        this.flag = true;
+      }else{
+        this.flag = false;
+      }
+      return this.flag;
     }
     
   }

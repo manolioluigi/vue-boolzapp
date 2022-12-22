@@ -119,26 +119,25 @@
 
                     <div class="row background-gray height-8">
 
-                        <div class="col-10">
+                        <div class="col-9">
 
                             <div class="d-flex align-items-center height-full">
 
                                 <img :src="'./img/avatar'+contacts[currentUser].avatar+'.jpg'" alt="" class="icon-image mx-2">
                                 <div>
-                                    <h5>{{contacts[currentUser].name}}</h5>
-                                    <span class="color-gray">Ultimo accesso oggi alle: {{contacts[currentUser].messages[contacts[currentUser].messages.lenght].date}}</span>
-                                    <!--
                                     <h5 class="line-height-5">{{contacts[currentUser].name}}</h5>
-                                    <span class="color-gray">Ultimo accesso oggi alle: {{orarioUltimoMessaggio(currentUser)}}</span>-->
+                                    <span class="color-dark-gray">Ultimo accesso oggi alle: {{orarioUltimoMessaggio(currentUser)}}</span>
                                 </div>
 
                             </div>
 
                         </div>
 
-                        <div class="col-2">
+                        <div class="col-3 d-flex justify-content-end align-items-center color-gray font-size-25">
 
-
+                            <i class="fa-solid fa-magnifying-glass mx-3"></i>
+                            <i class="fa-solid fa-paperclip mx-1"></i>
+                            <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
 
                         </div>
 
@@ -150,7 +149,16 @@
 
                         <div class="col-12">
 
+                            <!--Container messaggi-->
 
+                            <div class="d-flex flex-column padding-5">
+
+                                <div class="d-flex flex-column" v-for="(item, index) in contacts[currentUser].messages" :class="[isSent(currentUser, index) ? 'sent' : 'received']">
+                                    {{item.message}}
+                                    <span class="align-self-end color-gray font-size-10">{{orarioUltimoMessaggio(currentUser)}}</span>
+                                </div>
+
+                            </div>
 
                         </div>
 

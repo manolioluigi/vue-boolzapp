@@ -84,6 +84,10 @@ body{
     color: rgba(177,177,177,255);
 }
 
+.color-dark-gray{
+    color: rgb(88, 88, 88);
+}
+
 .color-light-blue{
     color: rgba(142,218,252,255);
 }
@@ -104,6 +108,10 @@ body{
     font-size: 13px;
 }
 
+.font-size-10{
+    font-size: 11px;
+}
+
 .scroll{
     overflow-y: scroll;
 }
@@ -120,4 +128,26 @@ body{
 
 .display-none{
     display: none;
+}
+
+.padding-5{
+    padding: 5%
+}
+
+.sent{
+    width: 40%;
+    background-color: rgba(213,249,186,255);
+    margin: 10px;
+    align-self: end;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+}
+
+.received{
+    width: 40%;
+    background-color: white;
+    margin: 10px;
+    align-self: start;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
 }
