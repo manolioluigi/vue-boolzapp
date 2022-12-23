@@ -184,15 +184,6 @@ createApp({
       let ora = arrayOrario[1];
       return ora;
     },
-/*
-    currentHour(){
-      let d = Date().toString();
-      const arrayOrario = d.split(" ");
-      let ora = arrayOrario[1];
-      return ora;
-    },
-
-*/
 
     getIndex(index){
       this.currentUser = index;
@@ -223,8 +214,6 @@ createApp({
       //let oraAttuale = this.currentHour();
       var d = new Date();
       var n = d.toLocaleTimeString();
-	
-      
 
       newMessage = {
         date: n,
