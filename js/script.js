@@ -185,6 +185,13 @@ createApp({
       return ora;
     },
 
+    orarioQuestoMessaggio(index){
+      let oraOggetto = this.contacts[this.currentUser].messages[this.contacts[this.currentUser].messages[index]].date.toString();
+      const arrayOrario = oraOggetto.split(" ");
+      let ora = arrayOrario[1];
+      return ora;
+    },
+
     getIndex(index){
       this.currentUser = index;
 
@@ -213,7 +220,7 @@ createApp({
       let message = document.getElementById("message").value;
       //let oraAttuale = this.currentHour();
       var d = new Date();
-      var n = d.toLocaleTimeString();
+      var n = "temp" + " " + d.toLocaleTimeString();
 
       newMessage = {
         date: n,

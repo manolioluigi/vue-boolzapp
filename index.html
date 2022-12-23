@@ -159,7 +159,7 @@
 
                                 <div class="d-flex flex-column" v-for="(item, index) in contacts[currentUser].messages" :class="[isSent(currentUser, index) ? 'sent' : 'received']">
                                     {{item.message}}
-                                    <span class="align-self-end color-gray font-size-10">{{orarioUltimoMessaggio(currentUser)}}</span>
+                                    <span class="align-self-end color-gray font-size-10">{{orarioQuestoMessaggio(index)}}</span>
                                 </div>
 
                             </div>
