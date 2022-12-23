@@ -179,14 +179,14 @@ createApp({
   methods: {
     
     orarioUltimoMessaggio(index){
-      let oraOggetto = this.contacts[index].messages[this.contacts[index].messages.length-1].date.toString();
+      let oraOggetto = this.contacts[index].messages[this.contacts[index].messages.length-1].date;
       const arrayOrario = oraOggetto.split(" ");
       let ora = arrayOrario[1];
       return ora;
     },
 
     orarioQuestoMessaggio(index){
-      let oraOggetto = this.contacts[this.currentUser].messages[this.contacts[this.currentUser].messages[index]].date.toString();
+      let oraOggetto = this.contacts[this.currentUser].messages[index].date;
       const arrayOrario = oraOggetto.split(" ");
       let ora = arrayOrario[1];
       return ora;
