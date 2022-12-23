@@ -184,13 +184,15 @@ createApp({
       let ora = arrayOrario[1];
       return ora;
     },
-
+/*
     currentHour(){
       let d = Date().toString();
       const arrayOrario = d.split(" ");
       let ora = arrayOrario[1];
       return ora;
     },
+
+*/
 
     getIndex(index){
       this.currentUser = index;
@@ -218,14 +220,19 @@ createApp({
     addMessage(){
 
       let message = document.getElementById("message").value;
-      let oraAttuale = this.currentHour();
-
+      //let oraAttuale = this.currentHour();
+      var d = new Date();
+      var n = d.toLocaleTimeString();
+	
+      
 
       newMessage = {
-        date: oraAttuale,
+        date: n,
         message: message,
         status: 'sent'
       };
+
+      console.log(newMessage)
 
       this.contacts[this.currentUser].messages.push(newMessage);
       document.getElementById("message").value = '';
