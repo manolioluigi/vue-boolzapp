@@ -76,8 +76,8 @@
                         <div class="col-12 d-flex align-items-center">
 
                             <i class="fa-solid fa-magnifying-glass mx-4 margin-top-5 color-gray font-size-18"></i>
-                            <input type="text" class="form-text width mx-3" placeholder="Cerca o inizia una nuova chat">
-
+                            <input type="text" class="form-text width mx-3" placeholder="Cerca o inizia una nuova chat" v-model="research" v-on:keyup="search()">
+                            
                         </div>
 
                     </div>
@@ -88,7 +88,7 @@
 
                         <div class="col-12 g-0">
 
-                            <div v-for="(contact, index) in contacts" class="d-flex justify-content-between chats" @click="getIndex(index)" :id="'chat'+index">
+                            <div v-for="(contact, index) in contacts" class="d-flex justify-content-between chats" @click="getIndex(index)" :id="'chat'+index" :class="(contact.visible) ? 'visible' : 'not-visible'">
 
                                 <div class="d-flex my-2">
 

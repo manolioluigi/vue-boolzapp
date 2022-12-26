@@ -168,3 +168,8 @@ body{
 .chats:hover{
     background-color: rgba(233,235,235,255);
 }
+
+.not-visible{
+    position: absolute;
+    left: -9999px;
+}

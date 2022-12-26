@@ -7,6 +7,7 @@ createApp({
       flag: false,
       currentUser: 0,
       addClass: false,
+      research: '',
         
       contacts: [
         {
@@ -251,6 +252,22 @@ createApp({
 
     rispostaUtente(){
       let risposta = setTimeout(this.messaggioUtente, 1000);
+    },
+
+    search(){
+
+      let researchCap = this.research.charAt(0).toUpperCase() + this.research.slice(1);
+      
+      for(let i = 0; i < this.contacts.length; i++){
+        
+        if(this.contacts[i].name.includes(researchCap)){
+          this.contacts[i].visible = true;
+        }else{
+          this.contacts[i].visible = false;
+        }
+
+      }
+
     }
     
   }
