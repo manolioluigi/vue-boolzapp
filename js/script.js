@@ -232,6 +232,25 @@ createApp({
 
       this.contacts[this.currentUser].messages.push(newMessage);
       document.getElementById("message").value = '';
+    },
+
+    messaggioUtente(){
+      const arrayRisposte = ["Ok", "Non lo so", "No", "Sgargiullo", "Non dire baggianate", "Stai Calmo", "Hey", "Un developer entra in un caffè: Splash"];
+      let rispostaSelezionata;
+      rispostaSelezionata = arrayRisposte[Math.floor(Math.random() * ((arrayRisposte.length-1) - 0 + 1) + 0)];
+      let message = document.getElementById("message").value;
+      var d = new Date();
+      var n = "temp" + " " + d.toLocaleTimeString();
+      newMessage = {
+        date: n,
+        message: rispostaSelezionata,
+        status: 'received'
+      };
+      this.contacts[this.currentUser].messages.push(newMessage);
+    },
+
+    rispostaUtente(){
+      let risposta = setTimeout(this.messaggioUtente, 1000);
     }
     
   }
