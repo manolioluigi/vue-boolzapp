@@ -173,3 +173,19 @@ body{
     position: absolute;
     left: -9999px;
 }
+
+.relative{
+    position: relative;
+}
+
+.dropdown-absolute{
+    visibility: hidden;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    font-size: 20px
+}
+
+.relative:hover .dropdown-absolute{
+    visibility: visible;
+}
